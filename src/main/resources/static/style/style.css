@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  color: white;
+  background: linear-gradient(to right, #2c3e50, #b83b5e);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.header-logo { height: 60px; margin-right: 20px; }
+.header-text h2 { margin: 0; font-size: 24px; font-weight: bold; color: white; }
+.header-text p { margin: 0; font-size: 14px; }
+.tnea-code {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #333;
+  border: 1px solid #d4a216;
+  background: linear-gradient(to bottom, #fceabb, #f8b500);
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+.tnea-code span { margin-right: 8px; font-size: 18px; }
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px rgba(248, 181, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(248, 181, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.5); }
+  100% { box-shadow: 0 0 5px rgba(248, 181, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5); }
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+h1 { 
+  font-size: 36px; 
+  color: #2c3e50; 
+  margin-bottom: 30px; 
+  margin-left:35rem}
+h2 {
+  font-size: 28px;
+  color: #34495e;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 153, 255, 0.841);
+}
+.hidden { display: none; }
+
+
+#landingPage, #studentDashboard, #adminDashboard {
+  background: #ffffff;
+  padding: 30px 200px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+  margin: auto ;
+  max-width: 1000px;
+}
+.absoluteicon{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.adminicon{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+
+#studentLoginSection, #adminLoginSection {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  padding: 40px ;
+  border-radius: 15px;
+  color: #fff;
+  max-width: 450px;
+  margin: 40px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+#studentLoginSection input, #adminLoginSection input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 12px 15px;
+  width: 100%;
+  color: #fff;
+  margin: 10px 0;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+#studentLoginSection input::placeholder, #adminLoginSection input::placeholder { color: #ccc; }
+
+#studentLoginSection input:hover, #adminLoginSection input:hover,
+#studentLoginSection input:focus, #adminLoginSection input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #3498db;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+}
+#studentLoginSection button, #adminLoginSection button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px ;
+  transition: all 0.3s ease;
+}
+#studentLoginSection button:hover, #adminLoginSection button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+
+.student {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: auto;
+  min-width: 200px;
+  background-color: #3498db;
+  color: white;
+}
+.student:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#studentDashboard button, #adminDashboard button {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 10px 5px;
+  min-width: 200px;
+  background-color: #3498db;
+  color: white;
+}
+#adminDashboard button:last-of-type { 
+  background-color: #95a5a6;
+}
+#studentDashboard button:hover, #adminDashboard button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+#adminDashboard button:last-of-type:hover {
+  background-color: #7f8c8d;
+}
+
+#adminDashboard input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 8px auto;
+  display: block;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+#adminDashboard input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+#adminDashboard input:hover {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+
+#adminTable, #studentTable {
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+table th, table td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+table th { background-color: #34495e; color: white; font-size: 14px; text-transform: uppercase; border: none; }
+table tr { background-color: #ffffff; }
+table tr:last-of-type td { border-bottom: none; }
+table tr:hover { background-color: #f1f1f1; }
+
+@media screen and (max-width: 768px) {
+  .site-header { flex-direction: column; text-align: center; }
+  .header-text { margin: 10px 0; }
+  .tnea-code { margin-left: 0; margin-top: 10px; }
+}

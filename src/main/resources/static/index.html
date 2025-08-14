@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Management System</title>
+   <link rel="stylesheet" href="./style/style.css">
+   <!-- font awesome -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+      <header class="site-header">
+    <img src="./OIP__1_-removebg-preview.png" alt="SNS College Logo" class="header-logo">
+    <div class="header-text">
+      <h2 title="TNEA Code: 2726">SNS College of Technology</h2>
+      <p>Autonomous | NAAC A++ | NBA Accreditation</p>
+    </div>
+    <div class="tnea-code" title="TNEA Code">
+    <span>&#10042;</span> TNEA Code: 2726
+  </div>
+  </header>
+   
+  <h1 title="Welcome" id="heading">Library Management</h1>
+
+  <div id="landingPage" class="section">
+    <button onclick="showStudentLogin()" class="student">Student Login</button>
+    <button onclick="showAdminLogin()" class="student">Library Admin Login</button>
+  </div>
+
+  <div id="studentLoginSection" class="section hidden">
+    <div class="login-box">
+      <h3>Student Login</h3>
+      <input type="text" id="studentRegNo" placeholder="Enter Register Number">
+      <button onclick="handleStudentLogin()">Login</button>
+    </div>
+  </div>
+
+  <div id="adminLoginSection" class="section hidden">
+    <div class="login-box">
+      <h3>Admin Login</h3>
+      <input type="text" id="adminUser" placeholder="Username">
+      <input type="password" id="adminPass" placeholder="Password">
+      <button onclick="handleAdminLogin()">Login</button>
+    </div>
+  </div>
+
+  <div id="studentDashboard" class="section hidden">
+    <h2>Welcome Student</h2>
+    <button onclick="loadBooks('studentTable')">View Available Books</button>
+    <div id="studentTable" class="hidden"></div>
+    <div class="absoluteicon" title="Log out"><i class="fa-solid fa-arrow-right-from-bracket fa-2x" onclick="handlelogout()"></i></div>
+  </div>
+
+  <div id="adminDashboard" class="section hidden">
+    <h2>Library Admin</h2>
+    <input type="text" id="bookName" placeholder="Book Name">
+    <input type="text" id="author" placeholder="Author">
+    <input type="number" id="copies" placeholder="Copies Available">
+    <input type="text" id="location" placeholder="Location">
+    <input type="text" id="dept" placeholder="Department">
+    <input type="url" id="refLink" placeholder="Reference Link">
+    <button onclick="submitBook()">Submit Book</button>
+    <button onclick="loadBooks('adminTable')">Show All Books</button>
+    <div id="adminTable" class="hidden"></div>
+     <div class="adminicon" title="Log out"><i class="fa-solid fa-arrow-right-from-bracket fa-2x" onclick="handlelogoutforadmin()"></i></div>
+  </div>
+  <script src="./script/script.js"></script>
+</body>
+</html>
