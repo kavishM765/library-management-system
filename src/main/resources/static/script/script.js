@@ -1,6 +1,5 @@
 // The new API_URL points to your new Java Spring Boot backend endpoint
-const API_URL_BOOKS = 'https://library-management-system-eq17.onrender.com/api/books';
-const API_URL_AUTH = 'https://library-management-system-eq17.onrender.com/api/auth';
+const API_URL = 'http://localhost:8080/api/books';
 
 function showStudentLogin() {
   document.getElementById('landingPage').classList.add('hidden');
